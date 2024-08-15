@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Header from "./temple/header";
 
 let nextId = 0;
 
@@ -23,7 +24,10 @@ export default function CreateCard() {
     };
 
     return (
+        <>
+        <Header/>
         <div className="flex flex-col items-center p-4">
+            
             <h1 className="text-2xl font-semibold mb-4 bg-green-300 p-3 rounded-lg shadow-md">ข้อมูลนามบัตร</h1>
             <div className="w-full max-w-md bg-white p-6 rounded-lg shadow-md">
                 <label className="block text-gray-700 font-medium mb-2">ชื่อ-สกุล:</label>
@@ -80,10 +84,11 @@ export default function CreateCard() {
                             <tr>
                                 
                             </tr>
-                        )}
+                        )} 
                     </tbody>
                 </table>
             </div>
         </div>
+        </>
     );
 }
