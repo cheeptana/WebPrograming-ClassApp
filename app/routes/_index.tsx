@@ -1,6 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import Mycards from "./cards.MyCards";
 import Header from "./temple/header";
+import { Link } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -11,48 +12,25 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="font-sans p-4">
-      <Header/>
-      {/* <h1 className="text-3xl">Welcome to Remix</h1>
-      <ul className="list-disc mt-4 pl-6 space-y-2">
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/start/quickstart"
-            rel="noreferrer"
-          >
-            5m Quick Start
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/start/tutorial"
-            rel="noreferrer"
-          >
-            30m Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/docs"
-            rel="noreferrer"
-          >
-            Remix Docs
-          </a>
-        </li>
-      </ul>
-      <h1 className="text-3xl">My Profile</h1>
-      <ul className="list-disc mt-4 pl-6 space-y-2">
-        <li>Name :Cheeptana</li>
-        <li>Class: Information tachnology</li>
-        <li>E-mail: Cheeptana.boy@gmail.com</li>
-        <img src="img1.jpg" alt="sea"/>
-        </ul>*/}
-    </div>
+    <>
+      <header>
+        <Header />
+      </header>
+      <body>
+        <a
+          href="./cards/createCards"
+          type="button"
+          className="m-5 text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          MyCard
+        </a>
+        <a
+          href="./books/booklist"
+          type="button"
+          className="m-5 text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          MyBook
+        </a>
+      </body>
+
+    </>
   );
 }

@@ -25,11 +25,11 @@ export default function BookFrom() {
             if (response.ok) {
                 const data = await response.json();
                 alert(`[INFO] ${data.message}`);
-                navigate('/sec02/booklist');
+                navigate('/books/booklist');
             }
 
         } catch (error) {
-            alert(`[ERR] this error of submit`)
+            alert(`[ERR] error submit`)
         }
     }
 
